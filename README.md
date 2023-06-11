@@ -69,6 +69,15 @@ Clone the repository https://github.com/jaiswaladi246/Petclinic.git
 ![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/5066c943-7dd5-43cf-b679-ff1c88a78ec2)
 
 - apply the command mvn clean package
+- The petclinic.war file is created inside the target folder
+
+## Integrate the application in the Tomcat Server
+
+- Copy the complete path of the petclinic.war file with pwd
+- Go to webapps folder, run pwd and copy the path (this is our target path)
+- Go to petclinic folder and copy the target path from where the war file is located: cp /root/Petclinic/target/petclinic.war /opt/apache-tomcat-9.0.76/webapps/
+- Go to our Tomcat page and add the path of the source code in the browser: IP:8080/Petclinic 
+  Our application is running as a separate process in the tomcat server
 
 ## Troubleshooting
 - We install Tomcat without installing java. we noticed an error message related to the path of Java. 
