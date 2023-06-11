@@ -6,9 +6,13 @@
 
 ## Connect this machine to the server using Mobaxterm and install tomcat in the /opt
 
+![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/24c6c29f-de58-46cd-bcf1-a2b34be626f1)
+
 ![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/c90eec59-cfc3-4758-b9d1-20c4e18f63a2)
 
-## Extract the tar file
+## Extract the tar file so that the file can be executable. 
+
+Use the command tar xvzf filename
 
 ![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/9a758893-aa21-43ff-bdf0-a7f9bf2eae66)
 
@@ -42,8 +46,9 @@ sudo vi /opt/apache-tomcat-9.0.76/webapps/host-manager/META-INF/context.xml
 
 - install Java and maven first so that we can define the variable otherwise we will received an error message when we will try
 
-![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/cf9ba875-6eff-4d68-9073-3d32f618b567)
+![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/2782f061-6bca-4c24-b7ea-79034d7fe38f)
 
+For start and stop Tomcat, use sudo stopTomcat and sudo startTomcat
 
 ![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/869c72c2-17d3-4c0d-aa03-01e945748bfe)
 
@@ -60,10 +65,14 @@ Tomcat is running
 Clone the repository https://github.com/jaiswaladi246/Petclinic.git
 
 -Go to cd Petclinic
+
+![1](https://github.com/adrydry/Deploy-Java-Application-on-Tomcat-Server/assets/102819001/5066c943-7dd5-43cf-b679-ff1c88a78ec2)
+
 - apply the command mvn clean package
 
-
-
+## Troubleshooting
+- We install Tomcat without installing java. we noticed an error message related to the path of Java. 
+- when trying accessing Tomcat from the server, we received an error message. We discovered that the port 8080 wasn't open in the security group. We correct it
 
 
 
